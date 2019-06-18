@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 connected = True
-#connected = False
+connected = False
 
 #%%
 
@@ -49,6 +49,9 @@ if connected == True:
             b.set_alpha(0.2)
     #add a line that connects the medians of all boxplots
     ax.plot(xticks,md,marker='o',c='black',lw=5,markersize=15,label='median')
+    xlab = 'Timepoint '
+else:
+    xlab = 'Model '
 
 ax.set_ylabel('Score (test set)',{'fontsize':16})
 ax.set_xlabel('Model',{'fontsize':16})
@@ -58,7 +61,7 @@ ax.set_ylim(0,1)
 #generate the xtick labels
 xtick_labels = []
 for m in xticks:
-    xtick_labels.append('Model '+str(m))
+    xtick_labels.append(xlab+str(m))
 ax.set_xticklabels(xtick_labels,rotation = 30, ha='center',fontsize=10)
 
 #save the figure to disk
@@ -91,8 +94,10 @@ ax.errorbar(xticks,md,yerr,capsize=10,fmt='none',c='black')
 #plot the (optional) connecting line
 if connected == True:
     ax.plot(xticks,md,marker='o',c='black',lw=5,markersize=15,label='median')
+    xlab = 'Timepoint '
 else:
     ax.scatter(xticks,md,marker='o',c='black',s=200)
+    xlab = 'Model '
 
 ax.set_ylabel('Score (test set)',{'fontsize':16})
 ax.set_xlabel('Model',{'fontsize':16})
@@ -103,7 +108,7 @@ ax.set_xticks(xticks)
 #generate the xtick labels
 xtick_labels = []
 for m in xticks:
-    xtick_labels.append('Model '+str(m))
+    xtick_labels.append(xlab+str(m))
 ax.set_xticklabels(xtick_labels,rotation = 30, ha='center',fontsize=10)
 
 if connected == True:
