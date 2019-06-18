@@ -14,10 +14,10 @@ that correspond to the 25th and 75th percentile (showing the interquantile range
 
 The performance of different models can be visualized via boxplots as
 ![](model_boxplots.png)
-**Figure 1** Visualizing the performance of independent models via boxplots.
+**Figure 1.** Visualizing the performance of independent models via boxplots.
 
 ![](model_errorbars.png)
-**Figure 2** Visualizing the performance of independent models via median+error bars corresponding to the interquantile range (the 25th and 75th percentiles).
+**Figure 2.** Visualizing the performance of independent models via median+error bars corresponding to the interquantile range (the 25th and 75th percentiles).
 
 ## Dependent models
 Sometimes we want to visualize a series of dependent models. E.g. how the performance
@@ -30,10 +30,10 @@ Similarly, we can connect the medians of the cleaner plot that only visualizes
 the median and the interquantile range.
 
 ![](model_boxplots_connected.png)
-**Figure 3** Visualizing the performance of dependent models via boxplots.
+**Figure 3.** Visualizing the performance of dependent models via boxplots.
 
 ![](model_errorbars_connected.png)
-**Figure 4** Visualizing the performance of dependent models via median+error bars corresponding to the interquantile range (the 25th and 75th percentiles).
+**Figure 4.** Visualizing the performance of dependent models via median+error bars corresponding to the interquantile range (the 25th and 75th percentiles).
 
 The plots are generated using artificial data. All plots are created in generate_plot.py.
 
